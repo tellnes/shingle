@@ -1,0 +1,29 @@
+{
+  "name": "shingle",
+  "version": "0.0.0",
+  "description": "text shingle",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "istanbul": "^0.3.0",
+    "tap": "^0.4.12"
+  },
+  "scripts": {
+    "test": "node_modules/.bin/tap test/simple.js",
+    "cover": "node_modules/.bin/istanbul cover test/simple.js"
+  },
+  "keywords": [],
+  "author": "Christian Tellnes <christian@tellnes.no> (http://christian.tellnes.com)",
+  "license": "MIT",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tellnes/shingle.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tellnes/shingle/issues"
+  },
+  "homepage": "https://github.com/tellnes/shingle"
+}
