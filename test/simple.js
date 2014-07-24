@@ -20,5 +20,21 @@ test(function (t) {
 
   t.deepEqual(shingle(['foo bar', 'baz']), [ 'foo bar', 'foo bar baz', 'baz' ])
 
+  t.deepEqual(shingle('foo bar baz', { distance: 2 }), [ 'foo', 'foo bar', 'foo baz', 'bar', 'bar baz', 'baz' ])
+
+  t.deepEqual(
+      shingle('foo bar baz haz', { distance: 2 })
+    , [ 'foo', 'foo bar', 'foo baz', 'bar', 'bar baz', 'bar haz', 'baz', 'baz haz', 'haz' ]
+    )
+
+  t.deepEqual(
+      shingle('A B C D', { max: 3, distance: 2 })
+    , [ 'A', 'A B', 'A B C', 'A C', 'A C D'
+      , 'B', 'B C', 'B C D', 'B D'
+      , 'C', 'C D'
+      , 'D'
+      ]
+    )
+
   t.end()
 })
