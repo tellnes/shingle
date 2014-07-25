@@ -25,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/tellnes/shingle/issues"
   },
-  "homepage": "https://github.com/tellnes/shingle"
+  "homepage": "https://github.com/tellnes/shingle",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  }
 }
