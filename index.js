@@ -5,7 +5,7 @@ module.exports = function (input, options) {
   options = options || {}
   var min = options.min || 2
     , max = Math.max(options.max || 2, min)
-    , distance = Math.min(options.distance || 1, max)
+    , distance = options.distance || 1
     , seperator = options.seperator || ' '
     , unigrams = options.unigrams !== false
     , output = []

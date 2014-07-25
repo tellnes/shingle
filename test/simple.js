@@ -36,5 +36,43 @@ test(function (t) {
       ]
     )
 
+  t.deepEqual(
+      shingle('A B C D', { max: 2, distance: 3 })
+    , [ 'A', 'A B', 'A C', 'A D'
+      , 'B', 'B C', 'B D'
+      , 'C', 'C D'
+      , 'D'
+      ]
+    )
+
+  t.deepEqual(
+      shingle('A B C D', { max: 3, distance: 3 })
+    , [ 'A', 'A B', 'A B C', 'A C', 'A C D', 'A D'
+      , 'B', 'B C', 'B C D', 'B D'
+      , 'C', 'C D'
+      , 'D'
+      ]
+    )
+
+  t.deepEqual(
+      shingle('A B C D E', { max: 3, distance: 3 })
+    , [ 'A', 'A B', 'A B C', 'A C', 'A C D', 'A D', 'A D E'
+      , 'B', 'B C', 'B C D', 'B D', 'B D E', 'B E'
+      , 'C', 'C D', 'C D E', 'C E'
+      , 'D', 'D E'
+      , 'E'
+      ]
+    )
+
+  t.deepEqual(
+      shingle('A B C D E', { max: 3, distance: 4 })
+    , [ 'A', 'A B', 'A B C', 'A C', 'A C D', 'A D', 'A D E', 'A E'
+      , 'B', 'B C', 'B C D', 'B D', 'B D E', 'B E'
+      , 'C', 'C D', 'C D E', 'C E'
+      , 'D', 'D E'
+      , 'E'
+      ]
+    )
+
   t.end()
 })
