@@ -1,6 +1,6 @@
 {
   "name": "shingle",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "text shingle",
   "main": "index.js",
   "dependencies": {},
