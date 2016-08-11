@@ -6,7 +6,7 @@
   "dependencies": {},
   "devDependencies": {
     "istanbul": "~0.4.1",
-    "tap": "^5.4.2"
+    "tap": "^6.3.2"
   },
   "scripts": {
     "test": "node_modules/.bin/tap test/simple.js",
